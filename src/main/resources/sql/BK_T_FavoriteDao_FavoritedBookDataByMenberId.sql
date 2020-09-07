@@ -1,31 +1,25 @@
 /* BK_T_FavoriteDao_FavoritedBookDataByMenberId.sql */
-
--- MEM_IDを固定中
-
+ -- MEM_IDを固定中
 select
-  B.BOOK_ID,
-  B.TITLE,
-  B.AUTHOR,
-  B.TAG_IDS,
-  B.OUTLINE,
-  B.BOOK_IMG,
-
-  FC.MEM_ID,
-  FC.MEM_NAME
+    B.BOOK_ID,
+    B.TITLE,
+    B.AUTHOR,
+    B.TAG_IDS,
+    B.OUTLINE,
+    B.BOOK_IMG,
+    FC.MEM_ID,
+    FC.MEM_NAME
 from
-  book_db.BK_M_BOOK B
-join
-(select
-  book_db.BK_T_FAVORITE.BOOK_ID,
-  book_db.BK_T_FAVORITE.MEM_ID,
-  book_db.M_MEM_BASIC.MEM_NAME
- from
-  book_db.BK_T_FAVORITE
- join
-  book_db.M_MEM_BASIC on book_db.BK_T_FAVORITE.MEM_ID = book_db.M_MEM_BASIC.MEM_ID
- where
-  book_db.BK_T_FAVORITE.MEM_ID = 2
- ) as FC
- on
-  B.BOOK_ID = FC.BOOK_ID
+    book_db.BK_M_BOOK B join (
+        select
+            book_db.BK_T_FAVORITE.BOOK_ID,
+            book_db.BK_T_FAVORITE.MEM_ID,
+            book_db.M_MEM_BASIC.MEM_NAME
+        from
+            book_db.BK_T_FAVORITE join book_db.M_MEM_BASIC
+                on book_db.BK_T_FAVORITE.MEM_ID = book_db.M_MEM_BASIC.MEM_ID
+        where
+            book_db.BK_T_FAVORITE.MEM_ID = 2
+    ) as FC
+        on B.BOOK_ID = FC.BOOK_ID
 ;

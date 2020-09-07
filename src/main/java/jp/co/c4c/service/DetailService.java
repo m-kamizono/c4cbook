@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import jp.co.c4c.db.dao.DetailDao;
+import jp.co.c4c.db.dao.InsertLendBookDao;
+import jp.co.c4c.db.dao.SelectBookDataDao;
+import jp.co.c4c.db.dao.SelectFavoriteMembersDao;
+import jp.co.c4c.db.dao.SelectLendHistorysDao;
 import jp.co.c4c.db.dto.BK_T_LendDto;
 import jp.co.c4c.db.dto.V_FavoriteMemberDto;
 import jp.co.c4c.db.dto.V_LendHistoryDto;
@@ -16,7 +19,10 @@ import jp.co.c4c.db.dto.V_TopAndDetailDto;
 public class DetailService {
 
     @Autowired
-    private DetailDao detailDao;
+    private SelectBookDataDao SelectBookDataDao;
+    private SelectLendHistorysDao SelectLendHistorysDao;
+    private SelectFavoriteMembersDao SelectFavoriteMembersDao;
+    private InsertLendBookDao InsertLendBookDao;
 
     /**
      * 詳細ページに表示させる本を取得
@@ -25,7 +31,7 @@ public class DetailService {
      */
     @Transactional
     public V_TopAndDetailDto getBookById(int bookId) {
-        return detailDao.seletctBookById(bookId);
+        return SelectBookDataDao.seletctBookById(bookId);
     }
 
     /**
@@ -35,7 +41,7 @@ public class DetailService {
      */
     @Transactional
     public List<V_LendHistoryDto> getLendHistorysById(int bookId) {
-        return detailDao.seletctLendHistorysById(bookId);
+        return SelectLendHistorysDao.seletctLendHistorysById(bookId);
     }
 
     /**
@@ -45,12 +51,12 @@ public class DetailService {
      */
     @Transactional
     public List<V_FavoriteMemberDto> getFavoriteMembersById(int bookId) {
-        return detailDao.seletctFavoriteMembersById(bookId);
+        return SelectFavoriteMembersDao.seletctFavoriteMembersById(bookId);
     }
 
     @Transactional
     public void saveLendBook(BK_T_LendDto bk_T_LendDto) {
-        detailDao.insertLendBook(bk_T_LendDto);
+        InsertLendBookDao.insertLendBook(bk_T_LendDto);
     }
 
 }

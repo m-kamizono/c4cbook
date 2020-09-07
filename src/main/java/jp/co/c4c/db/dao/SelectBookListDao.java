@@ -11,7 +11,7 @@ import jp.sf.amateras.mirage.SqlManager;
 import jp.sf.amateras.mirage.SqlResource;
 
 @Component
-public class TopDao {
+public class SelectBookListDao {
 
     @Autowired
     public SqlManager sqlManager;

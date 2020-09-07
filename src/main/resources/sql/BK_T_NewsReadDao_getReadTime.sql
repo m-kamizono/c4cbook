@@ -3,9 +3,9 @@
 -- MEM_IDは現在固定
 
 select
- READ_AT
+    READ_AT
 from
- book_db.BK_T_NEWS_READ
+    book_db.BK_T_NEWS_READ
 where
- MEM_ID = 1
+    MEM_ID = 2
 ;

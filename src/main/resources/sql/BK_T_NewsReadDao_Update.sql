@@ -3,9 +3,9 @@
 -- MEM_IDは現在固定
 
 update
- book_db.BK_T_NEWS_READ
+    book_db.BK_T_NEWS_READ
 set
- READ_AT = now()
+    READ_AT = now()
 where
- MEM_ID = 1
+    MEM_ID = 1
 ;
