@@ -2,6 +2,7 @@
 select
     B.BOOK_ID,
     B.TITLE,
+    B.TITLE_KANA,
     B.AUTHOR,
     B.TAG_IDS,
     B.OUTLINE,
