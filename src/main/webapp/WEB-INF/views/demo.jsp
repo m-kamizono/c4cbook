@@ -17,6 +17,26 @@
 <h2>デモ画面JS</h2>
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-12 mb-2">
+            <form method="get">
+                あいうえお順<input class="checkbox" type="checkbox" value="1" name="param">
+                お気に入り数順<input class="checkbox" type="checkbox" value="2" name="param">
+                読まれた回数順<input class="checkbox" type="checkbox" value="3" name="param">
+                <button id="sorting" type="button" class="btn btn-primary">並び替え</button>
+            </form>
+        </div>
+
+        <div id="bookList" class="col-12">
+<%--            <ul>--%>
+<%--                <li>ID：${topAndDetail.bookId}</li>--%>
+<%--                <li>タイトル：${topAndDetail.title}</li>--%>
+<%--                <li>著者${topAndDetail.author}</li>--%>
+<%--                <li>読まれた回数：${topAndDetail.lendCount}</li>--%>
+<%--                <li>お気に入り回数：${topAndDetail.favCount}</li>--%>
+<%--                <li>タグ：${topAndDetail.tagIds}</li>--%>
+<%--            </ul>--%>
+        </div>
+
     </div>
 </div>
 
