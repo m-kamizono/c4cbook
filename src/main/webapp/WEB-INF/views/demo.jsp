@@ -37,6 +37,28 @@
 <%--            </ul>--%>
         </div>
 
+        <div class="col-12">
+            ID順<input class="checkbox" type="checkbox" value="1" name="param2">
+            あいうえお順<input class="checkbox" type="checkbox" value="2" name="param2">
+            <button id="sorting2" type="button" class="btn btn-primary">並び替え</button>
+        </div>
+
+        <div id="content" class="col-12">
+            <ul>
+                <li name="id">ID：1</li>
+                <li name="productName">品名：りんご</li>
+            </ul>
+            <ul>
+                <li name="id">ID：2</li>
+                <li name="productName">品名：ばなな</li>
+            </ul>
+            <ul>
+                <li name="id">ID：3</li>
+                <li name="productName">品名：すいか</li>
+            </ul>
+        </div>
+
+
     </div>
 </div>
 
