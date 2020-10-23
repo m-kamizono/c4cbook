@@ -1,0 +1,30 @@
+INSERT INTO book_db.BK_M_BOOK (
+    TITLE,
+    TITLE_KANA,
+    AUTHOR,
+    AUTHOR_KANA,
+    TAG_IDS,
+    OUTLINE,
+    BOOK_IMG,
+    OFFER_MEM_ID,
+    OFFER_MEM_COMMENT,
+    OFFER_DATE,
+    DEL_FLG,
+    CREATE_AT,
+    UPDATE_AT
+)
+VALUES(
+    /*title*/,
+    /*titleKana*/,
+    /*author*/,
+    /*authorKana*/,
+    /*tagIds*/,
+    /*outline*/,
+    /*bookImg*/,
+    /*offerMemId*/,
+    /*offerMemComment*/,
+    /*offerDate*/,
+    /*delFlg*/,
+    /*createdAt*/,
+    /*updateAt*/
+)

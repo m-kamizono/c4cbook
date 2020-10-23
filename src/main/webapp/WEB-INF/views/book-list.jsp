@@ -13,7 +13,7 @@
         </c:url>
         <div class="book_box">
             <div class="book_img_area">
-                <a href="${detailLink}"><img class="book-img" src="resources/img/sample_book.jpg" alt=""></a>
+                <a href="${detailLink}"><img class="book-img" src="data:image/jpeg;base64,${topAndDetail.encodedBookImg}" alt=""></a>
             </div>
 
             <div class="book_info">
